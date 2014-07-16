@@ -1,5 +1,5 @@
 project LibAdaCrypt is
-   for Library_Name use "libadacrypt-0.8";
+   for Library_Name use "adacrypt-0.8";
    for Library_Kind use "static";
    for Library_Dir use "lib";
    for Library_Src_Dir use "lib";
