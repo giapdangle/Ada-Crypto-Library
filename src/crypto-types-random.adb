@@ -25,11 +25,11 @@ with Crypto;
 with Crypto.Types.Random_Source.File;
 
 package body Crypto.Types.Random is
-   Dev_Random :  Crypto.Types.Random_Source.File.Random_Source_File; 
-   
+    Dev_Random :  Crypto.Types.Random_Source.File.Random_Source_File;
+
     Rnd_Src : aliased Crypto.Types.Random_Source.Random_Source'Class
-      :=  Crypto.Types.Random_Source.Random_Source'Class(Dev_Random);   
-    
+      :=  Crypto.Types.Random_Source.Random_Source'Class(Dev_Random);
+
     procedure Set(Source : in Crypto.Types.Random_Source.Random_Source'Class) is
     begin
        Rnd_Src := Source;
@@ -39,7 +39,7 @@ package body Crypto.Types.Random is
     begin
        Rnd_Src.Read(B);
     end Read;
-    
+
     procedure Read(Byte_Array : out Bytes) is
     begin
        Rnd_Src.Read(Byte_Array);
@@ -68,5 +68,5 @@ package body Crypto.Types.Random is
     procedure Read(DWord_Array : out DWords) is
     begin
        Rnd_Src.Read(DWord_Array);
-    end Read;  
+    end Read;
 end Crypto.Types.Random;
